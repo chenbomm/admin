@@ -262,4 +262,16 @@ Route::middleware(['admin_auth','permission_auth'])->prefix('admin')->group(func
     Route::get('region/del/{id}','Admin\RegionController@del')->name('admin.region.del');
 
     /*#############################[地区管理]#############################*/
+    /*#############################[红包管理]#############################*/
+        //红包列表
+    Route::get('bonus/list','Admin\BonusController@list')->name('admin.bonus.list');
+        //红包添加
+    Route::get('bonus/add','Admin\BonusController@addBonus')->name('admin.bonus.add');
+    //红包添加执行
+    Route::post('bonus/doAddBonus','Admin\BonusController@doAddBonus')->name('admin.bonus.doAddBonus');
+    //发送红包
+    Route::get('bonus/senBonus/{id}','Admin\BonusController@senBonus')->name('admin.bonus.senBonus');
+    //执行发送红包
+    Route::post('bonus/doSenBonus','Admin\BonusController@doSenBonus')->name('admin.bonus.doSenBonus');
+    /*#############################[红包管理]#############################*/
 });
