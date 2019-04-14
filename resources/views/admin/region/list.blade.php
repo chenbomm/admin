@@ -6,7 +6,7 @@
 <!--页面顶部信息-->
 @section('pageHeader')
     <div class="pageheader">
-        <h2><i class="fa fa-home"></i> 地区列表 <span>Subtitle goes here...</span></h2>
+        <h2><i class="fa fa-home"></i> 地区列表 1<span>Subtitle goes here...</span></h2>
         <div class="breadcrumb-wrapper">
             <a class="btn btn-sm btn-danger" href="/admin/region/add">+ 添加地区</a>
             <a class="btn btn-sm btn-primary" href="/admin/region/list" >< 返回顶级</a>
