@@ -222,6 +222,10 @@ Route::middleware(['admin_auth','permission_auth'])->prefix('admin')->group(func
      Route::any('goods/sku/attr/{goods_id}','Admin\GoodsSkuController@getSkuAttr')->name('admin.goods.sku.attr');
      //商品属性值
      Route::any('goods/attr/value/{id}','Admin\GoodsSkuController@getAttrValues')->name('admin.goods.attr.value');
+     //商品评论列表
+    Route::get('goods/comment/list','Admin\CommentController@list')->name('admin.goods.comment.list');
+    //商品评论删除
+    Route::get('goods/comment/del/{id}','Admin\CommentController@del')->name('admin.goods.comment.del');
       /*#############################[商品相关]#############################*/
 
       /*#############################[系统管理]#############################*/

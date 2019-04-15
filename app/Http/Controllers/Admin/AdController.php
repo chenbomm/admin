@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 use App\Model\AdPosition;
 use App\Model\Ad;
 use App\Tools\ToolsAdmin;
+
+use OSS\OssClient;
+use OSS\Core\OssException;
 class AdController extends Controller
 {
 	protected $postion = null;
