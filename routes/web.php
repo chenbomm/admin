@@ -278,4 +278,10 @@ Route::middleware(['admin_auth','permission_auth'])->prefix('admin')->group(func
     //执行发送红包
     Route::post('bonus/doSenBonus','Admin\BonusController@doSenBonus')->name('admin.bonus.doSenBonus');
     /*#############################[红包管理]#############################*/
+    /*#############################[订单管理]#############################*/
+    //订单列表
+    Route::get('order/list','Admin\OrderController@list')->name('admin.order.list');
+    //订单详情
+    Route::get('order/detail/{id}','Admin\OrderController@detail')->name('admin.order.detail');
+    /*#############################[订单管理]#############################*/
 });
