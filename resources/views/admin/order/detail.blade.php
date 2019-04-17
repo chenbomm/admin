@@ -204,7 +204,7 @@
                     </div>
                 </div><!-- panel-body -->
                 <!--商品相册-->
-                
+
             </form>
         </div>
     </div>
