@@ -60,6 +60,12 @@ class BonusController extends Controller
         if (!$res){
             return redirect()->back()->with('msg','红包发送失败');
         }
-        return redirect('/admin/bonus/list');
+        return redirect('/admin/user/bonus/list');
+    }
+    //红包领取记录
+    public function userBonusList(){
+        $userBonus=new UserBonus();
+        $assign['user_bonus']=$userBonus->getSendRecord();
+        return view('admin.bonus.user',$assign);
     }
 }

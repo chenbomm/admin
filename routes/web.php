@@ -277,6 +277,7 @@ Route::middleware(['admin_auth','permission_auth'])->prefix('admin')->group(func
     Route::get('bonus/senBonus/{id}','Admin\BonusController@senBonus')->name('admin.bonus.senBonus');
     //执行发送红包
     Route::post('bonus/doSenBonus','Admin\BonusController@doSenBonus')->name('admin.bonus.doSenBonus');
+    Route::get('user/bonus/list','Admin\BonusController@userBonusList')->name('admin.user.bonus.list');
     /*#############################[红包管理]#############################*/
     /*#############################[订单管理]#############################*/
     //订单列表
